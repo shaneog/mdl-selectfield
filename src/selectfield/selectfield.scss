@@ -148,3 +148,18 @@ $selectfield-error-color: unquote("rgb(222, 50, 38)") !default;
     visibility: visible;
   }
 }
+
+.mdl-selectfield__placeholder {
+  bottom: $selectfield-vertical-spacing;
+  cursor: pointer;
+  color: $selectfield-label-color;
+  left: 0;
+  padding: 2px 0;
+  position: absolute;
+  text-align: right;
+  top: $selectfield-vertical-spacing;
+  width: 100%;
+  & > i {
+    outline: 0;
+  }
+}

@@ -168,6 +168,14 @@
         this.select_.addEventListener('blur', this.boundBlurHandler);
         this.select_.addEventListener('reset', this.boundResetHandler);
 
+        var placeholder_id = 'plc-' + (new Date().getTime());
+        var placeholder = document.createElement('div');
+        placeholder.id = placeholder_id;
+        placeholder.classList.add('mdl-selectfield__placeholder');
+        placeholder.innerHTML = '<i class="material-icons" tabindex="-1">arrow_drop_down</i>';
+        placeholder.addEventListener('click', function() { this.select_.focus() });
+        this.element_.appendChild(placeholder);
+
         this.updateClasses_();
         this.element_.classList.add(this.CssClasses_.IS_UPGRADED);
       }
